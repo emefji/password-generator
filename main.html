@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<h1>Passord Generator</h1>
+<p>Enter lenght</p>
+
+<div class="slidecontainer">
+  <input type="range" min="8" max="15" value="50" class="slider" id="myRange">
+  <p>Characters: <span id="demo"></span></p>
+</div>
+</body>
+<script>
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  var value = output.innerHTML = this.value;
+}
+
+</script>
+</html>
